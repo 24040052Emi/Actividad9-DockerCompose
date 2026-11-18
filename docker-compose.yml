@@ -1,0 +1,13 @@
+
+services:
+  angular-app:
+    image: equipo4-angular:1.0
+    container_name: equipo4-angular
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        REPO_URL: "https://github.com/24040100GabinoM/Equipo4-Curso-Ing.git"
+    ports:
+      - "8080:80"
+    restart: unless-stopped
